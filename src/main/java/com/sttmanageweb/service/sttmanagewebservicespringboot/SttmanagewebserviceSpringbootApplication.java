@@ -8,7 +8,7 @@ public class SttmanagewebserviceSpringbootApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SttmanagewebserviceSpringbootApplication.class, args);
-        System.out.println("ss");
+        System.out.println("ssa");
     }
 
 }
