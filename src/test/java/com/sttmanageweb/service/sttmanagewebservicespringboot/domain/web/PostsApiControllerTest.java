@@ -1,4 +1,4 @@
-package com.sttmanageweb.service.sttmanagewebservicespringboot.web;
+package com.sttmanageweb.service.sttmanagewebservicespringboot.domain.web;
 
 
 import com.sttmanageweb.service.sttmanagewebservicespringboot.domain.posts.Posts;

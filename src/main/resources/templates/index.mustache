@@ -1,10 +1,37 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <title>스프링 부트</title>
-</head>
-<body>
-    <h1>STT Management WebApp</h1>
-</body>
-</html>
+{{>layout/header}}
+
+<h1>STT SERVICE</h1>
+
+<div class = "col-mid-12">
+    <div class = "row">
+        <div class = "col-md-6">
+            <a href="/posts/save" role = "button" class="btn btn-primary">
+                글등록
+            </a>
+        </div>
+    </div>
+    <br>
+
+    <table class = "table table-horizontal table-bordered">
+        <thead class = "thead-strong">
+        <tr>
+            <th>게시글번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>최종수정일</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+            {{#posts}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td><a href = "/posts/update/{{id}}">{{title}}</a></td>
+                    <td>{{author}}</td>
+                    <td>{{modifiedDate}}</td>
+                </tr>
+            {{/posts}}
+        </tbody>
+    </table>
+</div>
+
+{{>layout/footer}}
