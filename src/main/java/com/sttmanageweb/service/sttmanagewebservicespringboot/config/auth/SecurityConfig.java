@@ -3,14 +3,17 @@ package com.sttmanageweb.service.sttmanagewebservicespringboot.config.auth;
 
 import com.sttmanageweb.service.sttmanagewebservicespringboot.domain.user.Role;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @RequiredArgsConstructor
 @EnableWebSecurity
+
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
+    @Autowired
     private final CustomOAuth2UserService customOAuth2UserService;
 
     @Override
