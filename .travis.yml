@@ -29,8 +29,8 @@ deploy:
     wait-until-deployed: true
 
   - provider: codedeploy
-      access_key_id: AKIARY3K3ED542AFIHT5 # Travis repo settings에 설정된 값
-      secret_access_key: TSohz6Cekj9rKjTpzxwGWxGNQVyWtFcktSSmf2Ph # Travis repo settings에 설정된 값
+      access_key_id:  $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+      secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
       bucket: sms-springboot-build # S3 버킷
       key: sttmanagewebservice-springboot.zip # 빌드 파일을 압축해서 전달
       bundle_type: zip
