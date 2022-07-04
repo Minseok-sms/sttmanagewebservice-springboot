@@ -9,8 +9,8 @@
                 글등록
             </a>
             {{#userName}}
+                Logged in as : <span id = "user"> {{userName}}</span>
                 <a href="/logout" class = "btn btn-info active" role = "button">Logout</a>
-                <div>Logged in : <span id = "user"> {{userName}}</span></div>
             {{/userName}}
 
             {{^userName}}
@@ -32,14 +32,14 @@
         </tr>
         </thead>
         <tbody id="tbody">
-            {{#posts}}
-                <tr>
-                    <td>{{id}}</td>
-                    <td><a href = "/posts/update/{{id}}">{{title}}</a></td>
-                    <td>{{author}}</td>
-                    <td>{{modifiedDate}}</td>
-                </tr>
-            {{/posts}}
+        {{#posts}}
+            <tr>
+                <td>{{id}}</td>
+                <td><a href = "/posts/update/{{id}}">{{title}}</a></td>
+                <td>{{author}}</td>
+                <td>{{modifiedDate}}</td>
+            </tr>
+        {{/posts}}
         </tbody>
     </table>
 </div>
