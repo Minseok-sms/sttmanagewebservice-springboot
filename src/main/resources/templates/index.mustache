@@ -8,15 +8,15 @@
             <a href="/posts/save" role = "button" class="btn btn-primary">
                 글등록
             </a>
-            {{#userName}}
+            {{#user.name}}
                 <a href="/logout" class = "btn btn-info active" role = "button">Logout</a>
-                <div style = "text-align: right">Logged in : <span id = "user"> {{userName}} ({{userEmail}})</span></div>
-            {{/userName}}
+                <div style = "text-align: right">Logged in : <span id = "user"> {{user.name}} ({{user.email}})</span></div>
+            {{/user.name}}
 
-            {{^userName}}
+            {{^user.name}}
                 <a href="/oauth2/authorization/google" class ="btn btn-success active" role="button">Google Login</a>
                 <a href="/oauth2/authorization/naver" class ="btn btn-secondary active" role="button">Naver Login</a>
-            {{/userName}}
+            {{/user.name}}
 
         </div>
     </div>
