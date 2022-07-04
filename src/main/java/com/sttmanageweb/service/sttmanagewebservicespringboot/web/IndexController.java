@@ -25,10 +25,15 @@ public class IndexController {
         // SessionUser user = (SessionUser) httpSession.getAttribute("user");
         if(user != null) {
             model.addAttribute("userName", user.getName());
+            model.addAttribute("userEmail", user.getEmail());
         }
         return "index";
     }
 
+    @GetMapping("/loginPage")
+    public String login(){
+        return "loginPage";
+    }
     @GetMapping("/posts/save")
     public String postsSave(Model model){
         return "posts-save";
@@ -38,7 +43,6 @@ public class IndexController {
     public String postsUpdate(@PathVariable Long id, Model model){
         PostsResponseDto dto = postsService.findById(id);
         model.addAttribute("post", dto);
-
         return "posts-update";
     }
 }

@@ -1,6 +1,6 @@
 {{>layout/header}}
 
-<h1>STT SERVICE</h1>
+<div style="text-align: center"><h1>STT SERVICE</h1></div>
 
 <div class = "col-mid-12">
     <div class = "row">
@@ -9,7 +9,7 @@
                 글등록
             </a>
             {{#userName}}
-                Logged in as : <span id = "user"> {{userName}}</span>
+                Logged in as : <span id = "user"> {{userName}} ({{userEmail}})</span>
                 <a href="/logout" class = "btn btn-info active" role = "button">Logout</a>
             {{/userName}}
 
