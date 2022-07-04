@@ -30,10 +30,6 @@ public class IndexController {
         return "index";
     }
 
-    @GetMapping("/loginPage")
-    public String login(){
-        return "loginPage";
-    }
     @GetMapping("/posts/save")
     public String postsSave(Model model){
         return "posts-save";
