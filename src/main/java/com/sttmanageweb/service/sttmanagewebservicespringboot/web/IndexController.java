@@ -19,6 +19,8 @@ public class IndexController {
     private final PostsService postsService;
     private final HttpSession httpSession;
 
+
+
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts", postsService.findAllDesc());
@@ -28,6 +30,11 @@ public class IndexController {
             model.addAttribute("userEmail", user.getEmail());
         }
         return "index";
+    }
+
+    @GetMapping("/loginpage")
+    public String loginpage(@LoginUser SessionUser user){
+        return "loginPage";
     }
 
     @GetMapping("/posts/save")
